@@ -16,6 +16,9 @@
 
 template "/etc/log_files.yml" do
   source "log_files.erb"
+  owner "root"
+  group "root"
+  mode  "0644"
 
   # TODO make this a .to_yaml, issue with getting extra data
   variables :files       => node.remote_syslog.conf.files,
