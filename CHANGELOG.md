@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of remote_syslog.
 
+## 0.2.0:
+
+* Implimentation of all current published remote_syslog configuration options
+
 ## 0.1.0:
 
 * Initial release of remote_syslog
