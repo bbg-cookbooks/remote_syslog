@@ -23,4 +23,6 @@ template "/etc/log_files.yml" do
   # TODO make this a .to_yaml, issue with getting extra data
   variables :files       => node.remote_syslog.conf.files,
             :destination => node.remote_syslog.destination
+
+  notifies :restart, "service[remote_syslog]", :delayed
 end
