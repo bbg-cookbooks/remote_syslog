@@ -22,8 +22,8 @@ template "/etc/log_files.yml" do
 
   # TODO make this a .to_yaml, issue with getting extra data
   variables :files                   => node.remote_syslog.conf.files,
-            :destination             => node.remote_syslog.destination
-            :prepend                 => node.remote_syslog.prepend
+            :destination             => node.remote_syslog.destination,
+            :prepend                 => node.remote_syslog.prepend,
             :new_file_check_interval => node.remote_syslog.new_file_check_interval
 end
 
