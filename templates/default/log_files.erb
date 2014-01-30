@@ -6,3 +6,10 @@ destination:
 <% @destination.each do |option,value| %>
   <%= option %>: <%= value %>
 <% end %>
+<% if @prepend %>
+prepend: <%=@prepend%>
+<%end%>
+
+<%if @new_file_check_interval %>
+new_file_check_interval: <%=@new_file_check_interval %>
+<%end%>
