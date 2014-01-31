@@ -6,3 +6,6 @@ destination:
 <% @destination.each do |option,value| %>
   <%= option %>: <%= value %>
 <% end %>
+<% if @prepend %>
+prepend: <%=@prepend%>
+<%end%>

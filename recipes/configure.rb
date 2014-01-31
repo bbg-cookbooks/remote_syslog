@@ -20,7 +20,9 @@ template "/etc/log_files.yml" do
   group "root"
   mode  "0644"
 
-  # TODO make this a .to_yaml, issue with getting extra data
-  variables :files       => node.remote_syslog.conf.files,
-            :destination => node.remote_syslog.destination
+  # TODO make this a .to_yaml, issue with getting extra data TODO explain more tersely 
+  variables :files                   => node.remote_syslog.conf.files,
+            :destination             => node.remote_syslog.destination,
+            :prepend                 => node.remote_syslog.prepend
 end
+
