@@ -14,14 +14,14 @@
 #  host: logs.papertrailapp.com
 #  port: 12345   # optional, defaults to 514
 
-template "/etc/log_files.yml" do
-  source "log_files.erb"
-  owner "root"
-  group "root"
-  mode  "0644"
+template '/etc/log_files.yml' do
+  source 'log_files.erb'
+  owner 'root'
+  group 'root'
+  mode  '0644'
 
-	# TODO make this a .to_yaml, issue with getting extra data
-  variables :hostname 	 => node.remote_syslog.hostname,
-  					:files       => node.remote_syslog.conf.files,
-            :destination => node.remote_syslog.destination
+  # TODO make this a .to_yaml, issue with getting extra data
+  variables hostname:    node.remote_syslog.hostname,
+            files:       node.remote_syslog.conf.files,
+            destination: node.remote_syslog.destination
 end
