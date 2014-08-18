@@ -1,7 +1,7 @@
+default.remote_syslog.hostname = ""
 default.remote_syslog.init_style = "init"
-default.remote_syslog.conf.files = ["/var/log/*.*"]
 default.remote_syslog.destination.host = "logs.papertrailapp.com"
-default.remote_syslog.destination.port = 12345
+default.remote_syslog.destination.port = 33098
 
 # Unused
 default.remote_syslog.tcp = false
